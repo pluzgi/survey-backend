@@ -13,7 +13,7 @@ from database import get_db, engine, Base
 from models import SurveyResponse, ConcernRating, FeatureImportance
 
 # Create all database tables if they don't exist
-# Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 # Initialize FastAPI application
 app = FastAPI(title="Survey Backend API", version="1.0.0")
